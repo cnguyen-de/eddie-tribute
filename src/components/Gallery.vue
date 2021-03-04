@@ -1,8 +1,11 @@
 <template>
-  <div class="gallery grid grid-cols-2 gap-4 md:grid-cols-4">
-    <figure v-for="img of images" :key="img">
-      <img :src="img.url" alt="" />
-    </figure>
+  <div class="gallery grid">
+    <div class="gallery-container">
+      <figure class="" v-for="img of images" :key="img">
+        <img loading="lazy" :src="img.url" alt="" v-if="!img.url.includes('mp4')" />
+        <video loading="lazy" autoplay loop :src="img.url" v-if="img.url.includes('mp4')" />
+      </figure>
+    </div>
   </div>
 </template>
 
@@ -30,4 +33,35 @@ export default class Gallery extends Vue {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.gallery-container {
+  width: 100%;
+  column-count: 3;
+  column-gap: 16px;
+}
+
+figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 16px;
+  break-inside: avoid;
+}
+
+figure > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+figure > video {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+@media only screen and (max-width: 768px) {
+  .gallery-container {
+    column-count: 1;
+  }
+  figure {
+    place-items: center;
+  }
+}
+</style>

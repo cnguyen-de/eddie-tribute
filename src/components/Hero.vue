@@ -1,5 +1,7 @@
 <template>
-  <div class="text-3xl text-white text-center h-64 grid place-items-center">hi</div>
+  <div class="text-4xl text-white text-center h-64 grid place-items-center tracking-wide uppercase">
+    Good bye Eddie, you were the best!
+  </div>
 </template>
 
 <script lang="ts">
