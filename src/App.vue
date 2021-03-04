@@ -1,11 +1,19 @@
 <template>
-  <div class="h-screen w-screen bg-gray-900 text-white grid place-items-center">TEST</div>
+  <div class="min-h-screen w-screen bg-gray-900 grid place-items-center text-3xl text-white">
+    <Hero />
+  </div>
 </template>
 
-<script>
-export default {
-  name: 'App'
-}
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component'
+import Hero from './components/Hero.vue'
+
+@Options({
+  components: {
+    Hero
+  }
+})
+export default class App extends Vue {}
 </script>
 
 <style>
