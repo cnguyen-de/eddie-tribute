@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen w-screen bg-gray-900 grid place-items-center text-3xl text-white">
+  <div class="min-h-screen w-screen bg-gray-900">
     <Hero />
     <Gallery />
   </div>
