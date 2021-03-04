@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery grid">
+  <div class="gallery p-4">
     <div class="gallery-container">
       <figure class="" v-for="img of images" :key="img">
         <img loading="lazy" :src="img.url" alt="" v-if="!img.url.includes('mp4')" />
@@ -35,7 +35,6 @@ export default class Gallery extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .gallery-container {
-  width: 100%;
   column-count: 3;
   column-gap: 16px;
 }
