@@ -1,16 +1,19 @@
 <template>
   <div class="min-h-screen w-screen bg-gray-900 grid place-items-center text-3xl text-white">
     <Hero />
+    <Gallery />
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import Hero from './components/Hero.vue'
+import Gallery from './components/Gallery.vue'
 
 @Options({
   components: {
-    Hero
+    Hero,
+    Gallery
   }
 })
 export default class App extends Vue {}
