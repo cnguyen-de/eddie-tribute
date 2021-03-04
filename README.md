@@ -1,24 +1,10 @@
 # eddie-tribute
 
-## Project setup
-```
-npm install
-```
+A website tribute to Eddie, feel free to create PR or fork.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Add more Eddie images/gifs:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Add more links to this file https://github.com/cnguyen-de/eddie-tribute/blob/master/data.yml
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+each new link should be in the form of
+`- url: DIRECT_URL_TO_IMAGE`
