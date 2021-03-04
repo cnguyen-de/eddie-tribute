@@ -3,7 +3,7 @@
     <div class="gallery-container">
       <figure class="" v-for="img of images" :key="img">
         <img loading="lazy" :src="img.url" alt="" v-if="!img.url.includes('mp4')" />
-        <video loading="lazy" playsinline autoplay loop :src="img.url" v-if="img.url.includes('mp4')" />
+        <video loading="lazy" controls playsinline autoplay loop :src="img.url" v-if="img.url.includes('mp4')" />
       </figure>
     </div>
   </div>
